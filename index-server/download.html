@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+        integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+
+    <!-- MDUI JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+        integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.w3cbus.com/mdui.org/static/theme/material/index.e8409b3c.css">
+
+</head>
+
+<body>
+    <div class="mdui-dialog" id="qq">
+        <div class="mdui-dialog-title" style="text-align: center;">报告链接失效</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">加作者 QQ 与我们交流并反馈相关 BUG 吧！<br /><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAIAAAD+96djAAAVcElEQVR4Ae2bdaxd1RLGb0vhFX19uNMWl+C0SHErTpDgFiA4QQohWJEEK5LgEFKcQHB3t+At7vBwKS3S0j70/e79Dt+dzt5nn33by190pzmdNWtm1qy1Zo2svW+PP//8s23K09bWc8oiaAWmLETDEqYsRGMheqWjMXLkyJ9//jkhq5vTTjvt1FNPbZqxY8f+8ccf/+p4QP7444/uggxiNydMmPDLL7+4Of4500811VRgwPfo0WPGGWd012+//VbUqmfPnjPMMINpfv311/Hjx7tZB+jVq9dKK63UoMRZxueZZ56pIyLS3HnnnVHCEkssQe/ZZ58NEs3iGu2///6R8vDDD49ynn76aXovuugikP369YuUDz30UKQUzECRBjWKNNUYJmsJ2SLEyYawWtVS6GWjENSSrJqAjcUQTMPQrF3ExC5phcX9/vvvxkdg0jX3kgiQRaDKmDFj2M/qZ5pppkEJWcTbb7/9745Hcyi1CI6LaPTbu3dv2Nddd12NwtzQgcWlyemQPocddhjEOgLW6owzzoCRgSSHoSGWRaBStc70MjXZaWuLYBi0lKLAdR5U+eGHH6op/9fxJBosIg7E9HhMw4pEsR1K9ZZdsHDqYmjTA0RpEV8Nt7D/l1566YknnkgiFllkkU022SQh1cQyDzzwQDZqwIABRYIVV1xx8ODBCb/gggsKc/PNN3/yySfLL7/8mmuuaRroZ555ZjVZsjoHVsR33333u+++azkC1lhjjRVWWCEhG01ZoH99NDAhkFh4kW377bcXfTwab731FpQsxEcffWRpCJERSkhyliYTsP7660OGB034YjNpxdDQ+GiIHiWLmqcDW+toFKVUY1gU3LhcnSlpLr744hz7zz77LMZRmiDZ6plmmsnE888/PxKIrx9//LGRAkDOMcccCdm9zW5LqPr37//GG2+8/vrr88wzj1XEO5KYgF977bWNBMD4ob/uuusi8rLLLoMSdrrSs++++0bKvwNu4SP+jiGRKettJpze1FXEJILJb3abReAa8IUkal988QVqkRfR9LPbbrtxknFUwnz55ZfQnHbaaTQPOOAATQOA5ldffQXlk08+iWsEf/rpp9OEna6BAwcSdkTM70ILLUQXD9mXkZMMdJtFoCIhBqegrJnloGm1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" />
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <div class="mdui-container-fluid">
+        <div class="mdui-row">
+            <div class="mdui-card mdui-center mdui-col-xs-4" style="width: 450px;height: auto;">
+
+                <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                <div class="mdui-card-media">
+                    <img src="http://localhost/card.webp" />
+
+                    <!-- 卡片中可以包含一个或多个菜单按钮 -->
+
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">首选下载方式</div>
+                    </div>
+
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content"><svg class="mdui-icon material-icons"
+                            style="height: 24px;width: 24px;" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M590.4 536S776 432 779.2 433.6a270.448 270.448 0 0 0-328-195.2A266.192 266.192 0 0 0 292.8 352c1.6 0 297.6 184 297.6 184z"
+                                fill="#0364B8" p-id="4771"></path>
+                            <path
+                                d="M409.6 384A217.488 217.488 0 0 0 296 352h-3.2A216.16 216.16 0 0 0 80 571.2a223.088 223.088 0 0 0 38.4 121.6L416 662.4l174.4-168z"
+                                fill="#0F78D4" p-id="4772"></path>
+                            <path
+                                d="M780.8 433.6h-11.2a165.696 165.696 0 0 0-68.8 14.4L592 492.8 710.4 624l214.4 67.2a175.472 175.472 0 0 0-72-238.4 192.848 192.848 0 0 0-72-19.2z"
+                                fill="#1490DF" p-id="4773"></path>
+                            <path
+                                d="M769.6 600l-44.8-27.2L622.4 512l-32-19.2-81.6 35.2-158.4 67.2-72 28.8-160 67.2A217.712 217.712 0 0 0 296 784h472a177.84 177.84 0 0 0 155.2-92.8z"
+                                fill="#28A8EA" p-id="4774"></path>
+                        </svg> 世纪互联 OneDrive</div>
+
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions">
+                        <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-float-left"
+                            mdui-dialog="{target: '#d1'}"><i class="mdui-icon material-icons">file_download</i></button>
+                        <button class="mdui-btn mdui-ripple mdui-float-right"
+                            mdui-dialog="{target: '#qq'}">链接失效了？报告给作者</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-card mdui-center mdui-col-xs-4" style="width: 450px;height: auto;">
+
+                <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                <div class="mdui-card-media">
+                    <img src="http://localhost/card.webp" />
+
+                    <!-- 卡片中可以包含一个或多个菜单按钮 -->
+
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">备用下载方式</div>
+                    </div>
+
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content"><svg class="mdui-icon material-icons"
+                            style="height: 24px;width: 50px;" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M372.287007 1023.922771a364.801733 364.801733 0 1 1 0-729.44993 354.821888 354.821888 0 0 1 61.414433 5.220227 415.929249 415.929249 0 0 1 815.276601 116.380351 400.268568 400.268568 0 0 1-2.610114 44.679 281.585176 281.585176 0 1 1 29.786 562.249136 253.488073 253.488073 0 0 1-32.396113 0H372.287007z"
+                                fill="#1890FF" p-id="1438"></path>
+                            <path
+                                d="M555.148482 768.745802a30.707217 30.707217 0 0 1-24.719309-30.707217V572.526688a32.242577 32.242577 0 0 1 24.719309-30.707217l153.536083-33.470866 16.274825-65.713444H546.550461a113.463165 113.463165 0 0 0-114.230845 113.156094V752.470977a114.998526 114.998526 0 0 0 114.230845 114.384382h179.023073l-16.274825-65.86698z m448.632434-325.650032H823.683091l16.121289 65.713443 153.536083 33.470866a30.707217 30.707217 0 0 1 24.872845 30.707217v165.511897a32.396113 32.396113 0 0 1-24.872845 30.707217l-153.536083 33.31733-16.121289 65.866979h180.097825a114.384382 114.384382 0 0 0 114.230846-114.384381V556.251863a114.84499 114.84499 0 0 0-114.230846-113.156093z"
+                                fill="#FFFFFF" p-id="1439"></path>
+                            <path d="M709.298709 646.838152h131.580423v16.121288h-131.580423z" fill="#FFFFFF"
+                                p-id="1440">
+                            </path>
+                        </svg> 阿里云盘</div>
+
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions">
+                        <button class="mdui-btn mdui-btn-icon mdui-float-left" mdui-dialog="{target: '#d2'}"><i
+                                class="mdui-icon material-icons">file_download</i></button>
+                        <button class="mdui-btn mdui-ripple mdui-float-right"
+                            mdui-dialog="{target: '#qq'}">链接失效了？报告给作者</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-card mdui-center mdui-col-xs-4" style="width: 450px;height: auto">
+
+                <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+                <div class="mdui-card-media">
+                    <img src="http://localhost/card.webp" />
+
+                    <!-- 卡片中可以包含一个或多个菜单按钮 -->
+
+                    <!-- 卡片的标题和副标题 -->
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">其他下载方式</div>
+                    </div>
+
+                    <!-- 卡片的内容 -->
+                    <div class="mdui-card-content"><svg class="mdui-icon material-icons"
+                            style="height: 24px;width: 50px;" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M271.38 429.637a245.5 245.5 0 0 1-3.395-40.777c0-134.68 109.18-243.86 243.86-243.86s243.86 109.18 243.86 243.86a245.5 245.5 0 0 1-3.394 40.776C875.967 430.312 976 530.763 976 654.578c0 124.235-100.712 224.947-224.946 224.947-62.743 0-119.486-25.688-160.287-67.12l0.003-0.004c-21.44-21.822-21.322-56.893 0.354-78.57 21.796-21.795 57.133-21.795 78.928 0 0.693 0.694 1.365 1.4 2.014 2.12 20.427 19.87 48.317 32.108 79.065 32.108 62.631 0 113.404-50.772 113.404-113.403 0-62.631-50.773-113.403-113.404-113.403-28.739 0-54.981 10.69-74.967 28.311l-0.096-0.096-1.886 1.886c-2.2 2.033-4.32 4.152-6.353 6.353l-4.306 4.305 0.076 0.077-229.876 229.876-0.03-0.03c-40.833 41.708-97.767 67.59-160.747 67.59C148.712 879.525 48 778.813 48 654.578c0-123.711 99.866-224.098 223.38-224.94z m1.644 338.422c62.63 0 113.403-50.772 113.403-113.403 0-62.631-50.772-113.403-113.403-113.403-62.631 0-113.404 50.772-113.404 113.403 0 62.63 50.773 113.403 113.404 113.403zM511.845 521.1c73.034 0 132.24-59.206 132.24-132.24 0-73.033-59.206-132.239-132.24-132.239s-132.24 59.206-132.24 132.24c0 73.033 59.206 132.239 132.24 132.239z"
+                                fill="#06A7FF" p-id="1822"></path>
+                            <path
+                                d="M643.351 402.868a56.966 56.966 0 0 1-0.352-6.334c0-31.123 25.23-56.353 56.353-56.353s56.353 25.23 56.353 56.353c0 2.39-0.15 4.745-0.438 7.057-7.616 127.82-113.688 229.128-243.422 229.128-129.734 0-235.806-101.307-243.422-229.128a56.908 56.908 0 0 1-0.438-7.057c0-31.123 25.23-56.353 56.353-56.353s56.353 25.23 56.353 56.353c0 2.141-0.12 4.255-0.352 6.334 6.996 66.448 63.204 118.23 131.506 118.23 68.302 0 124.51-51.782 131.506-118.23z"
+                                fill="#FF436A" p-id="1823"></path>
+                        </svg> 百度网盘</div>
+
+                    <!-- 卡片的按钮 -->
+                    <div class="mdui-card-actions">
+                        <button class="mdui-btn mdui-btn-icon mdui-float-left" mdui-dialog="{target: '#d3'}"><i
+                                class="mdui-icon material-icons">file_download</i></button>
+                        <button class="mdui-btn mdui-ripple mdui-float-right"
+                            mdui-dialog="{target: '#qq'}">链接失效了？报告给作者</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-dialog" id="d1">
+        <div class="mdui-dialog-title" style="text-align: center;">使用世纪互联下载</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">您确定要前往吗？如果是的话请按下确认按钮<br />提取码：无
+        </div>
+        <div class="mdui-dialog-actions">
+            <a href="https://pan.zyglq.cn/api/v3/file/source/3/vivo%20Y51%E6%90%9E%E6%9C%BA%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F.exe?sign=JWiaIv6x6fGHIFbSsgr-TmvGS3A8-EKKMqsYXVdBImQ%3D%3A0"
+                target="_blank"><button class="mdui-btn mdui-ripple" mdui-dialog-confirm>前往</button></a>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <div class="mdui-dialog" id="d2">
+        <div class="mdui-dialog-title" style="text-align: center;">使用阿里云盘下载</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">您确定要前往吗？如果是的话请按下确认按钮<br />提取码：无
+        </div>
+        <div class="mdui-dialog-actions">
+            <a href="https://www.aliyundrive.com/s/jra1ASev8Kg" target="_blank"><button class="mdui-btn mdui-ripple"
+                    mdui-dialog-confirm>前往</button></a>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <div class="mdui-dialog" id="d3">
+        <div class="mdui-dialog-title" style="text-align: center;">使用百度网盘下载</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">您确定要前往吗？如果是的话请按下确认按钮<br />提取码：1234
+        </div>
+        <div class="mdui-dialog-actions">
+            <a href="https://pan.baidu.com/s/10hU3Zg5tRt_y36y9KGSDnQ" target="_blank"><button
+                    class="mdui-btn mdui-ripple" mdui-dialog-confirm>前往</button></a>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+</body>
+
+</html>

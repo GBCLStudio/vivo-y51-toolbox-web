@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--👆👆大家都是老 HTML 人了-->
+<html>
+
+<!--
+╔═════════════════════════════════════════════════════════════════════════════════════════════════════
+║title: vivo Y51 搞机工具箱
+║网站 2.0 版本
+║网站由 Gong_cx 创作，有对 MDUI 官网进行相关借鉴
+║工具箱作者：一人一车一世界
+║例行传统，开发者藏了一个小彩蛋
+║图片均转为 Base64 编码，无需存储图片
+╚═════════════════════════════════════════════════════════════════════════════════════════════════════
+-->
+
+<head>
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAACoCAYAAAB0S6W0AAAACXBIWXMAABJ0AAASdAHeZh94AAAGvGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTA3LTA4VDAwOjQ0OjU4KzA4OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wNy0xNlQxOTozNzo1MiswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wNy0xNlQxOTozNzo1MiswODowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkNmI5Yzk3ZC1lMWY2LTNjNDEtOTJmYy05OTUyZTU3NzhmYjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6YjI4OGM1MjctMzEzNi0wZDQ0LTg5MGQtZmNmNDk5YTUzZWZmIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6YjI4OGM1MjctMzEzNi0wZDQ0LTg5MGQtZmNmNDk5YTUzZWZmIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiMjg4YzUyNy0zMTM2LTBkNDQtODkwZC1mY2Y0OTlhNTNlZmYiIHN0RXZ0OndoZW49IjIwMjEtMDctMDhUMDA6NDQ6NTgrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MWQ1ODNkNzMtNzQwMy1jNDRjLWFkMGEtYjUzMDQyYzQ5NjgzIiBzdEV2dDp3aGVuPSIyMDIxLTA3LTA4VDAwOjQ2OjQ3KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQ2YjljOTdkLWUxZjYtM2M0MS05MmZjLTk5NTJlNTc3OGZiNCIgc3RFdnQ6d2hlbj0iMjAyMS0wNy0xNlQxOTozNzo1MiswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj+q2twAAA+LSURBVHic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"
+        type="image/png">
+    <!--👆👆logo-->
+    <title>vivo Y51搞机工具箱</title>
+    <!--👆👆title-->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--👆👆老UTF-8了 html4写法-->
+    <meta charset="UTF-8">
+    <!--👆👆老UTF-8了 html5写法-->
+    <meta name="author" content="© 一人一车一世界">
+    <!--👆👆SEO设置-->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--👆👆移动端适配-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <!--👆👆移动端适配-->
+    <meta name="googlebot">
+    <!--👆👆google 爬虫-->
+    <meta name="robots" content="max-snippet:-1">
+    <!--👆👆摘要没有字符数限制-->
+    <meta name="google" content="notranslate">
+    <!--👆👆其实咱不需要Google translate...-->
+    <meta name="google" content="nopagereadaloud">
+    <!--👆👆其实咱不需要Google的阅读...-->
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+        integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+
+    <!-- MDUI JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+        integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.e8409b3c.css">
+</head>
+
+<body class="mdui-drawer-body-left">
+    <div class="mc-appbar mdui-appbar mdui-appbar-fixed">
+        <div class="toolbar mdui-toolbar"><button class="drawer mdui-btn mdui-btn-icon mdui-ripple"
+                mdui-drawer="{target: '#main-drawer', swipe: true}"><i
+                    class="mdui-icon material-icons">menu</i></button><a class="headline" href="/"
+                one-link-mark="yes">vivo Y51 搞机工具箱</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <span class="mdui-btn mdui-btn-icon" onclick="document.getElementById('awa').src='http://localhost/pay.html'"><i
+                    class="mdui-icon material-icons">&#xe87d;</i></span>
+        </div>
+    </div>
+    <!--👆👆配置工具栏-->
+    <div class="mc-drawer mdui-drawer" id="main-drawer">
+        <div class="mdui-list"><a class="mdui-list-item mdui-ripple mdui-list-item-active" href="/"
+                one-link-mark="yes"><i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            </a>
+            <div class="mdui-divider"></div><a class="mdui-list-item mdui-ripple" target="_blank" one-link-mark="yes"
+                onclick="document.getElementById('awa').src='http://localhost/download.html'"><svg
+                    class="svg mdui-list-item-icon mdui-icon material-icons" style="height: 24px;width: 24px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M590.4 536S776 432 779.2 433.6a270.448 270.448 0 0 0-328-195.2A266.192 266.192 0 0 0 292.8 352c1.6 0 297.6 184 297.6 184z"
+                        fill="#0364B8" p-id="4771"></path>
+                    <path
+                        d="M409.6 384A217.488 217.488 0 0 0 296 352h-3.2A216.16 216.16 0 0 0 80 571.2a223.088 223.088 0 0 0 38.4 121.6L416 662.4l174.4-168z"
+                        fill="#0F78D4" p-id="4772"></path>
+                    <path
+                        d="M780.8 433.6h-11.2a165.696 165.696 0 0 0-68.8 14.4L592 492.8 710.4 624l214.4 67.2a175.472 175.472 0 0 0-72-238.4 192.848 192.848 0 0 0-72-19.2z"
+                        fill="#1490DF" p-id="4773"></path>
+                    <path
+                        d="M769.6 600l-44.8-27.2L622.4 512l-32-19.2-81.6 35.2-158.4 67.2-72 28.8-160 67.2A217.712 217.712 0 0 0 296 784h472a177.84 177.84 0 0 0 155.2-92.8z"
+                        fill="#28A8EA" p-id="4774"></path>
+                </svg>
+                <div class="mdui-list-item-content">所有下载</div>
+            </a>
+            <div class="mdui-divider"></div>
+            <div class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#qq'}">
+                <svg class="svg mdui-list-item-icon mdui-icon material-icons" style="height: 24px;width: 24px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M61.44 591.36C23.04 680.96 17.92 768 48.64 783.36c17.92 10.24 51.2-15.36 84.48-61.44 12.8 51.2 43.52 97.28 87.04 133.12-46.08 17.92-74.24 43.52-74.24 76.8 0 51.2 81.92 92.16 179.2 92.16 89.6 0 163.84-33.28 179.2-76.8h20.48c12.8 43.52 87.04 76.8 179.2 76.8 99.84 0 179.2-40.96 179.2-92.16 0-30.72-30.72-58.88-74.24-76.8 43.52-35.84 74.24-81.92 87.04-133.12 30.72 46.08 64 71.68 84.48 61.44 30.72-15.36 25.6-102.4-12.8-192-30.72-71.68-71.68-122.88-102.4-135.68v-12.8c0-28.16-7.68-53.76-20.48-74.24v-5.12c0-12.8-2.56-25.6-7.68-35.84C826.88 145.92 706.56 0 512 0S197.12 145.92 189.44 330.24c-5.12 10.24-7.68 23.04-7.68 35.84v5.12c-12.8 20.48-20.48 46.08-20.48 74.24v12.8c-30.72 10.24-71.68 61.44-99.84 133.12z"
+                        p-id="13995"></path>
+                </svg>
+                <div class="mdui-list-item-content">作者QQ</div>
+            </div>
+            <a class="mdui-list-item mdui-ripple" href="https://www.coolapk.com/u/1187163" target="_blank"
+                one-link-mark="yes"><svg class="svg mdui-list-item-icon mdui-icon material-icons"
+                    style="height: 24px;width: 24px;" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M74.97196999 414.90963001c34.04231111-76.21594112 107.52758557-132.7710811 189.32622222-148.30554112 63.47283001-10.92266667 128.52337778 5.76474112 184.22897778 36.34820778 47.27087445 24.09054777 88.95905223 57.58672555 127.12770446 94.17765888-18.38648889 20.93511111-44.47952555 32.8286811-65.41463779 50.91176335-52.4894811-44.2368-109.95484445-88.4129189-179.73854777-99.09286002-89.80859221-14.98832555-180.40604445 56.00900779-193.99869668 144.66465223-9.8910811 52.24675555 11.5294811 107.70963001 51.39721558 142.11603001 45.14702222 39.80705223 110.62234112 50.7297189 167.96633998 35.55934777 65.536-15.83786667 116.02299221-64.92918557 155.70868224-116.93321444 61.53102222-82.04136334 112.86755555-171.12177778 168.20906666-257.28948224 15.83786667-21.78465223 53.94583666-19.6001189 66.81031112 4.36906667 72.39300779 124.03294777 143.45102222 248.85475555 215.72266666 372.94838557 8.61676999 17.17285888 5.03656334 40.71727445-10.92266666 52.4894811-14.86696334 12.07561443-37.92592555 11.65084445-52.48948224-0.78885888-85.86429667-61.59170333-171.66791111-123.30476999-257.35016221-185.1392 21.48124445-17.11217778 43.69066667-33.37481443 65.96076999-49.45540779 27.00325888 14.6849189 49.81949667 37.7438811 79.18933334 47.39223779-23.18032555-45.02565888-49.63745223-88.4129189-75.48776334-131.92154112-48.54518557 67.29576334-87.68474112 141.32716999-140.11353999 206.01363002-54.55265223 71.36142222-131.0113189 132.22494777-222.21558556 145.33214776-44.2368 3.88361443-90.23336334 4.79383666-132.40699221-11.34743666-60.86352555-21.78465223-114.14186667-66.81031111-141.75194112-125.7927111-32.10050333-63.8369189-30.46210333-142.23739221 0.24272554-206.25635556z"
+                        p-id="3697"></path>
+                </svg>
+                <div class="mdui-list-item-content">作者酷安</div>
+            </a>
+            <div class="mdui-divider"></div>
+            <a class="mdui-list-item mdui-ripple" target="_blank" one-link-mark="yes" onclick="document.getElementById('awa').src='http://localhost/index.html'"><i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">主页</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="index-old.html" target="_blank" one-link-mark="yes"><svg
+                    class="svg mdui-list-item-icon mdui-icon material-icons" style="height: 24px;width: 24px;"
+                    viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h1024v1024H0z" fill="#E8E8E8" p-id="6291"></path>
+                    <path
+                        d="M136.533333 307.2h38.5024v374.3744H136.533333z m323.584 17.066667v356.488533h-37.546666v-17.066667H277.845333v17.066667h-37.546666V324.4032z m-182.272 302.830933h144.5888v-113.8688H277.845333z m0-149.9136h144.5888v-116.3264H277.845333z m333.0048-166.2976h38.0928v104.8576h23.3472v38.775467h-95.573333v17.066666q0 11.0592-0.8192 30.72h78.2336v180.497067h-37.956267v-141.7216h-42.1888a365.9776 365.9776 0 0 1-32.768 136.8064l-29.0816-25.3952a480.733867 480.733867 0 0 0 25.8048-180.906667V319.0784h38.912v96.6656h34.133334z m113.8688 148.6848v34.4064a402.773333 402.773333 0 0 1-41.7792 188.416l-26.624-28.2624a364.714667 364.714667 0 0 0 32.768-160.1536V335.0528a624.64 624.64 0 0 0 174.8992-26.2144l18.8416 34.816a661.572267 661.572267 0 0 1-158.1056 24.576v54.613333h149.504v33.1776a363.349333 363.349333 0 0 1-49.9712 138.0352 200.055467 200.055467 0 0 0 67.9936 57.207467l-19.2512 34.133333a221.866667 221.866667 0 0 1-72.9088-59.528533 282.146133 282.146133 0 0 1-76.1856 59.8016l-18.432-34.4064a264.260267 264.260267 0 0 0 72.0896-58.5728 383.6928 383.6928 0 0 1-43.4176-133.12z m44.373334 0a357.546667 357.546667 0 0 0 32.768 98.7136 305.5616 305.5616 0 0 0 35.089066-98.7136z"
+                        fill="#737A8C" p-id="6292"></path>
+                </svg>
+                <div class="mdui-list-item-content">旧版网站</div>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>© 2021 一车一人一世界</p>
+            <p>Powered by <a href="https://www.gcxstudio.cn" target="_blank" one-link-mark="yes">Gong_cx</a> &amp; <a
+                    href="https://github.com/aidiannaodeczs" target="_blank" one-link-mark="yes">爱电脑的初中生</a></p>
+            <p>本站样式模仿自 <a href="https://mdui.org" target="_blank">MDUI 官网</a></p>
+        </div>
+    </div>
+    <div class="mdui-dialog" id="qq">
+        <div class="mdui-dialog-title" style="text-align: center;">与作者交流</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">加作者 QQ 与我们交流或反馈相关 BUG 吧！<br /><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAIAAAD+96djAAAVcElEQVR4Ae2bdaxd1RLGb0vhFX19uNMWl+C0SHErTpDgFiA4QQohWJEEK5LgEFKcQHB3t+At7vBwKS3S0j70/e79Dt+dzt5nn33by190pzmdNWtm1qy1Zo2svW+PP//8s23K09bWc8oiaAWmLETDEqYsRGMheqWjMXLkyJ9//jkhq5vTTjvt1FNPbZqxY8f+8ccf/+p4QP7444/uggxiNydMmPDLL7+4Of3000811VRgwPfo0WPGGWd012+//VbUqmfPnjPMMINpfv311/Hjx7tZB+jVq9dKK63UoMRZxueZZ56pIyLS3HnnnVHCEkssQe/ZZ58NEs3iGu2///6R8vDDD49ynn76aXovuugikP369YuUDz30UKQUzECRBjWKNNUYJmsJ2SLEyYawWtVS6GWjENSSrJqAjcUQTMPQrF3ExC5phcX9/vvvxkdg0jX3kgiQRaDKmDFj2M/qZ5pppkEJWcTbb7/9745Hcyi1CI6LaPTbu3dv2Nddd12NwtzQgcWlyemQPocddhjEOgLW6owzzoCRgSSHoSGWRaBStc70MjXZaWuLYBi0lKLAdR5U+eGHH6op/9fxJBosIg7E9HhMw4pEsR1K9ZZdsHDqYmjTA0RpEV8Nt7D/l1566YknnkgiFllkkU022SQh1cQyDzzwQDZqwIABRYIVV1xx8ODBCb/gggsKc/PNN3/yySfLL7/8mmuuaRroZ555ZjVZsjoHVsR33333u+++azkC1lhjjRVWWCEhG01ZoH99NDAhkFh4kW377bcXfTwab731FpQsxEcffWRpCJERSkhyliYTsP7660OGB034YjNpxdDQ+GiIHiWLmqcDW+toFKVUY1gU3LhcnSlpLr744hz7zz77LMZRmiDZ6plmmsnE888/PxKIrx9//LGRAkDOMcccCdm9zW5LqPr37//GG2+8/vrr88wzj1XEO5KYgF977bWNBMD4ob/uuusi8rLLLoMSdrrSs++++0bKvwNu4SP+jiGRKettJpze1FXEJILJb3abReAa8IUkal988QVqkRfR9LPbbrtxknFUwnz55ZfQnHbaaTQPOOAATQOA5ldffQXlk08+iWsEf/rpp9OEna6BAwcSdkTM70ILLUQXD9mXkZMMdJtFoCIhBqegrJnloGm1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" />
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <!--👆👆配置可折叠导航栏-->
+    <div class="mdui-fab-wrapper" mdui-fab="">
+        <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+            <i class="mdui-icon material-icons">&#xe5c5;</i>
+            <i class="mdui-icon mdui-fab-opened material-icons">&#xe5c7;</i>
+        </button>
+        <div class="mdui-fab-dial" style="height: auto;">
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-yellow" style="transition-delay: 6ms;"
+                mdui-dialog="{target: '#thanks-3rd'}"><svg class="svg mdui-icon material-icons"
+                    style="height: 24px;width: 24px;" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M607.25836 906.263611l-16.957947-16.617859-72.550476 71.418274 16.55249 16.231079c17.084473 16.752991 47.336914 14.453308 67.448853-5.131226C621.861754 952.579285 624.334288 923.02533 607.25836 906.263611L607.25836 906.263611 607.25836 906.263611 607.25836 906.263611z"
+                        p-id="6861"></path>
+                    <path
+                        d="M916.652952 599.296021l-0.335754-0.347107L798.55377 477.1651l0.184937-0.169342L670.618467 346.469879l-90.34906 81.924194c-59.878967 56.386353-136.128326 61.044128-143.449219 61.362793-3.545227 0.260315-7.172943 0.386993-10.787964 0.386993-90.343414 0-170.963013-80.976776-174.344635-84.416748l-12.512131-12.734039 12.512131-12.731201c7.214203-7.336609 132.268677-134.523575 233.522339-232.011581-21.752228-20.840256-37.389893-35.41938-46.546021-43.387703-27.466919-23.896011-84.812195-53.442829-156.042419-58.076485C228.861311 43.28368 150.384123 53.555111 81.824171 122.337006c-95.831665 96.13501-107.71698 209.394348-34.389603 327.534699 1.107487 1.779755 2.026073 3.262085 2.713387 4.417297 17.100998 28.717468 74.049637 80.170166 94.55555 97.570374l-5.398895 6.088989 72.881882-71.753784c15.41008-15.166748 35.947342-23.521973 57.823273-23.521973 21.64975 0 42.027679 8.211548 57.402191 23.122223 15.445557 14.988983 23.992828 34.955719 24.072479 56.225617 0.004303 3.727356-0.241821 7.417603-0.751129 11.046753 5.946625-1.318665 12.066834-2.024353 18.300842-2.024353 21.655457 0 42.043335 8.210083 57.413574 23.12793 15.445618 14.978882 23.991394 34.951416 24.066773 56.227051 0.015625 2.984619-0.157867 5.946655-0.475189 8.880127 4.975037-0.917664 10.075195-1.40564 15.256439-1.40564 21.654053 0 42.041901 8.212952 57.403534 23.125061 18.362122 17.817139 26.188049 42.118713 23.497864 65.486999 5.091614-0.963074 10.322632-1.460999 15.626282-1.460999 21.649719 0 42.037659 8.201538 57.399292 23.11792 31.487427 30.554016 32.04071 80.192871 1.562073 111.438294l16.289185 15.962036c7.949768 7.807495 19.168762 11.688477 31.577026 10.933044 13.318787-0.800964 26.290405-6.734802 36.529175-16.698975 10.234436-9.968445 16.344727-22.619995 17.223877-35.63147 0.812317-12.129456-3.118408-23.103699-11.063843-30.902588l-0.207703-0.203491L560.814695 650.903748l26.627625-25.958984 152.652283 149.609253c7.949768 7.803223 19.165833 11.682739 31.575562 10.935852 13.318726-0.7995 26.28186-6.73761 36.519165-16.701782 20.473206-19.932617 23.236023-49.783936 6.167175-66.528442L664.987669 556.069092l11.477844-11.201965 14.964844-15.472656L845.732786 672.024231c17.023377 16.701904 47.520569 14.077087 68.111877-5.792908C931.853819 647.385559 933.229551 615.55249 916.652952 599.296021L916.652952 599.296021 916.652952 599.296021 916.652952 599.296021z"
+                        p-id="6862"></path>
+                    <path
+                        d="M757.332762 35.501701c-66.939514 0-122.463867 26.977654-149.674683 50.06562-73.371277 62.27182-263.703674 254.166351-315.613037 306.735748 24.298767 20.757782 78.616577 61.086823 133.98584 61.086823 2.775574 0 5.553986-0.101013 8.24707-0.30304l0.815155-0.049744c0.624542-0.019989 68.239807-3.149719 119.196014-51.210846l0.273132-0.251862 117.593994-106.635498 231.49939 235.842651c20.555786-21.483307 58.74231-61.721283 73.034119-78.849854 19.562866-23.475037 43.604004-72.221863 46.947144-132.342651 2.778442-50.022888-8.72644-125.109955-79.297974-198.741547-54.289368-56.628311-117.209961-85.345802-187.000549-85.345802L757.332762 35.501701 757.332762 35.501701 757.332762 35.501701z"
+                        p-id="6863"></path>
+                    <path
+                        d="M592.723143 774.225403c-8.271179-8.02655-19.245483-12.44812-30.903992-12.44812-11.78656 0-22.840515 4.498413-31.141602 12.670044L415.873198 887.476196c-8.266968 8.127564-12.790955 18.912598-12.745422 30.364868 0.044067 11.457398 4.647766 22.208313 12.963104 30.268799 8.269806 8.040649 19.25116 12.456787 30.908295 12.456787 11.775208 0 22.830566-4.503906 31.130219-12.669617l114.821411-113.028687c17.04187-16.777222 16.942261-43.982422-0.223328-60.642944L592.723143 774.225403 592.723143 774.225403 592.723143 774.225403z"
+                        p-id="6864"></path>
+                    <path
+                        d="M496.199827 687.081543c-8.269836-8.025085-19.255463-12.446655-30.908325-12.446655-11.776611 0-22.836243 4.498352-31.143036 12.66571L319.344145 800.328064c-8.255585 8.137512-12.785278 18.914002-12.739777 30.370483 0.044128 11.456543 4.647766 22.198914 12.963104 30.278137 8.274078 8.025147 19.249786 12.448059 30.908356 12.448059 11.780884 0 22.834808-4.499756 31.135895-12.665772l114.815735-113.028809c17.040375-16.781494 16.94223-43.986694-0.227631-60.643005L496.199827 687.081543 496.199827 687.081543 496.199827 687.081543z"
+                        p-id="6865"></path>
+                    <path
+                        d="M313.876921 542.157044c-0.035553-11.458008-4.64209-22.198853-12.957428-30.278137-8.27121-8.026489-19.252594-12.44809-30.909729-12.44809-11.782288 0-22.840469 4.498444-31.131638 12.665802l-114.818573 113.027405c-8.257011 8.133301-12.780998 18.908386-12.736893 30.374817 0.039818 11.447998 4.642082 22.200317 12.95742 30.268127 8.276939 8.02655 19.252617 12.44812 30.915428 12.44812 11.775208 0 22.839081-4.492676 31.130219-12.664368l114.821396-113.02887c8.255615-8.128906 12.768219-18.911133 12.729797-30.369141L313.876921 542.157044 313.876921 542.157044 313.876921 542.157044z"
+                        p-id="6866"></path>
+                    <path
+                        d="M412.905577 630.525818c-0.038422-11.450806-4.64212-22.201782-12.957428-30.276672-8.275482-8.02655-19.249756-12.442444-30.908325-12.442444-11.780853 0-22.840515 4.488464-31.135895 12.662964L223.08824 713.498596c-8.257019 8.128906-12.781021 18.91394-12.735504 30.364807 0.038391 11.453674 4.647781 22.201721 12.9617 30.27948 8.268356 8.02655 19.244034 12.446716 30.905457 12.446716 11.780869 0 22.839096-4.492737 31.130234-12.670044l114.82135-113.023132C408.427061 652.764526 412.951109 641.983765 412.905577 630.525818L412.905577 630.525818 412.905577 630.525818 412.905577 630.525818z"
+                        p-id="6867"></path>
+                </svg></button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 15ms;"
+                mdui-dialog="{target: '#shoucang'}"><i class="mdui-icon material-icons">bookmark</i></button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" style="transition-delay: 30ms;"
+                mdui-dialog="{target: '#copyright'}"><i class="mdui-icon material-icons">&#xe90c;</i></button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" style=" transition-delay: 45ms;"
+                mdui-dialog="{target: '#hengheng'}"><i class=" mdui-icon material-icons">&#xe7f2;</i></button>
+        </div>
+    </div>
+    <!--👆👆右下角图标配置-->
+    <div class="mdui-dialog" id="hengheng">
+        <div class="mdui-dialog-title">哼哼，啊啊啊啊啊啊</div>
+        <div class="mdui-dialog-content mdui-typo-body-1">哼哼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<br />1145141919810 HOMO 恶臭对话框</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭恶臭对话框</button>
+        </div>
+    </div>
+    <!--👆👆小彩蛋awa-->
+    <div class="mdui-dialog" id="shoucang">
+        <div class="mdui-dialog-title">欢迎收藏我们的网站！</div>
+        <div class="mdui-dialog-content mdui-typo-body-1">本站域名：https://vivo-tools.mihuyou.icu，欢迎收藏本站以便获取后续更新呀~</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <!--👆👆弹出希望收藏网站的对话框-->
+    <div class="mdui-dialog" id="copyright">
+        <div class="mdui-dialog-title" style="text-align: center;">版权归属</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;">本站版权归 2021 © 一人一车一世界
+            所有<br />网站运营：<a href="https://www.gcxstudio.cn" target="_blank"
+                style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;">Gong_cx</a> &amp; 爱电脑的初中生</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <!--👆👆版权归属对话框-->
+    <div class="mdui-dialog" id="thanks-3rd">
+        <div class="mdui-dialog-title" style="text-align: center;">特别鸣谢</div>
+        <div class="mdui-dialog-content mdui-typo-body-1" style="text-align: center;"><strong>感谢 <a
+                    href="https://www.gcxstudio.cn" target="_blank"
+                    style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;"
+                    one-link-mark="yes">Gong_cx</a> &amp; <a href="https://burial0268.top/" target="_blank"
+                    style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;"
+                    one-link-mark="yes">Burial0268</a> &amp; <a href="https://zyglq.cn/" target="_blank"
+                    style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;"
+                    one-link-mark="yes">资源管理器explorer</a> &amp; 臭羊头
+                对本站的大力支持！</strong></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <!--👆👆特别鸣谢对话框-->
+    <div class="banner" style="width: 100%;height: 100%;">
+        <div><iframe id="awa" style="padding-top: 70px;padding-bottom: 64px;text-align: center;" height="1500"
+                frameborder="no" border="0" width="100%" name="网页嵌入" src="http://localhost:80/index.html"></iframe>
+        </div>
+        <div class="copyright"
+            style="text-align: center;color: rgba(0,0,0,.52);text-decoration: none;text-decoration:none;">
+            <p>Powered by <a href="https://www.gcxstudio.cn" target="_blank"
+                    style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;"
+                    one-link-mark="yes">Gong_cx</a>
+                &amp; <a href="https://github.com/aidiannaodeczs" target="_blank"
+                    style="color: rgba(0,0,0,.54)!important;text-decoration-style: none;"
+                    one-link-mark="yes">爱电脑的初中生</a></p>
+            <p>网站托管于 Github Pages | Hosted by Github Pages</p>
+            <!--👆👆底部版权-->
+        </div>
+</body>
+
+</html>
